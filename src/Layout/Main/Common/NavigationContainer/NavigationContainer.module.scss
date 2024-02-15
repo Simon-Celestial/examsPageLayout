@@ -1,0 +1,100 @@
+@import "../../../../Variables/Variables.module";
+@import "../../../../Animations/Animations.module";
+
+
+.navigationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .mobileMenuBtn {
+    display: none;
+    margin-right: 50px;
+    padding: 10px;
+    svg {
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+  .logoBlock {
+    display: block;
+    &:hover {
+      animation: logoRotate 1s linear;
+    }
+    a {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 48px;
+      text-align: left;
+    }
+  }
+  .navigationBlock {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: left;
+      transition: $transition-fast;
+      &:hover {
+        color: rgba(0, 0, 0, 0.5);
+        transform: scale(1.05);
+      }
+    }
+    .languageSelection {
+      font-size: 16px;
+      font-weight: 500;
+      border: transparent;
+      outline: 0;
+      background: transparent;
+      border-radius: 10px;
+      padding: 8px 12px 8px 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navigationContainer {
+    .logoBlock {
+      a {
+        font-size: 26px;
+
+      }
+    }
+    .navigationBlock {
+      gap: 20px;
+      max-width: 700px;
+      a {
+        font-size: 14px;
+      }
+      .languageSelection {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .navigationContainer {
+    .mobileMenuBtn {
+      display: block;
+    }
+    .navigationBlock {
+      display: none;
+
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .navigationContainer {
+    .mobileMenuBtn {
+      margin-right: 0;
+      display: block;
+    }
+    .navigationBlock {
+      display: none;
+
+    }
+  }
+}

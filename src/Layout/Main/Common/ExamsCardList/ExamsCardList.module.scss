@@ -146,8 +146,37 @@
         color: $color-white;
         border-color: $color-black;
       }
-
     }
   }
-
+}
+@media screen and (max-width: 1250px) {
+  .examsRight  {
+    .cardsBlock {
+      .examCard {
+        max-width: 765px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 725px) {
+  .examsRight  {
+    .cardsBlock {
+      .examCard {
+        max-width: unset;
+      }
+    }
+    .showMore {
+      margin-top: 25px;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .examsRight  {
+    .cardsBlock {
+    .infoBlock {
+      flex-direction: column;
+      gap: 10px;
+    }
+    }
+  }
 }

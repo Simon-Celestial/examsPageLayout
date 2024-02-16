@@ -124,9 +124,9 @@
 @media screen and (max-width: 1250px) {
   .pageWrapper {
 .examsSection {
-  padding: 25px 10px 50px 10px;
+  padding: 25px 30px 50px 30px;
   .examsContent {
-    gap: 30px;
+    gap: 15px;
   }
 
 }
@@ -184,6 +184,17 @@
             font-size: 14px;
           }
         }
+      }
+    }
+  }
+}
+@media screen and (max-width: 725px) {
+  .pageWrapper {
+    .examsSection {
+      padding: 25px 10px 25px 10px;
+
+      .examsContent {
+        flex-direction: column;
       }
     }
   }
